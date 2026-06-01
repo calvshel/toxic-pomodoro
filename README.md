@@ -12,6 +12,10 @@ Toxic Pomodoro is a tiny Python CLI for focused 25-minute work sprints. It updat
 - Graceful `KeyboardInterrupt` handling
 - Ten hardcoded sarcastic anti-quit messages
 - ANSI red formatting for dramatic early exits
+- Custom work duration with `--minutes`
+- Break timer mode with `--break`
+- Calm interrupt mode with `--calm`
+- Unit tests for duration parsing and formatting
 
 ## Quick Start
 
@@ -26,6 +30,15 @@ Pomodoro active | time remaining: 24:59
 ```
 
 Pressing `Ctrl+C` before completion prints one random roast and exits.
+
+## Options
+
+```bash
+python3 pomodoro.py --minutes 45
+python3 pomodoro.py --break
+python3 pomodoro.py --calm
+python3 pomodoro.py --seed 7
+```
 
 ## Why This Exists
 
@@ -48,14 +61,14 @@ Run a syntax check with:
 
 ```bash
 python3 -m py_compile pomodoro.py
+python3 -m unittest -v
 ```
 
 ## Roadmap
 
-- Optional custom work duration
-- Break timer mode
 - Session completion log
 - Configurable roast intensity
+- Optional sound on completion
 
 ## License
 
